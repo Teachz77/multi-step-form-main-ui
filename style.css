@@ -1,6 +1,4 @@
-
 :root{
-    
     /*COLORS PRIMARY*/
     --BLUE-950: hsl(213, 96%, 18%);
     --PURPLE-600: hsl(243, 100%, 62%);
@@ -16,10 +14,10 @@
     --WHITE: hsl(0, 100%, 100%);
 
     /*FONT-SIZE*/
-    --FS-LARGE: 40px;
-    --FS-MEDIUM: 28px;
-    --FS-SMALL: 16px;
-    --FS-VERYSMALL: 12px;
+    --FS-LARGE: 4.0rem; /* 40px -> 4.0rem */
+    --FS-MEDIUM: 2.8rem; /* 28px -> 2.8rem */
+    --FS-SMALL: 1.6rem; /* 16px -> 1.6rem */
+    --FS-VERYSMALL: 1.2rem; /* 12px -> 1.2rem */
 
     /*FONT-WEIGHT*/
     --FW-BOLD: 700;
@@ -32,12 +30,104 @@
     src: url(assets/fonts/Ubuntu-Regular.ttf);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html{
     font-size: 62.5%;
+}
+
+body{
+    font-family: 'Ubuntu';
+    background-color: var(--BLUE-100);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+}
+
+h2{
+    font-size: var(--FS-MEDIUM);
+}
+
+.hidden{
+    display: none !important;
+}
+
+/*FORM*/
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 530px;
+}
+
+/*FORM SIDEBAR*/
+
+.form-sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 5rem;
+    position: relative;
+    margin-top: -12rem;
+}
+
+.progress-step{
+    border: 1px solid var(--WHITE);
+    border-radius: 50%;
+    padding: 0.8rem 1.2rem; 
+}
+
+.progress-step h3{
+    color: var(--WHITE);
+    font-size: var(--FS-VERYSMALL);
+}
+
+/*FORM CONTENT*/
+
+.form-content{
+    background-color: var(--WHITE);
+    padding: 2rem;
+    border-radius: 8px
+}
+
+.form-1{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input{
+    display: grid;
+    gap: 5px;
+}
+
+.form-input input{
+    border: 1px solid var(--GREY-500);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+
+.form-button{
+    width: 100%;
+    background-color: var(--WHITE);
+    margin-top: auto;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
 }
