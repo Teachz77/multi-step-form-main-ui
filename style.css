@@ -101,8 +101,9 @@ h2{
 
 .form-content{
     background-color: var(--WHITE);
-    padding: 2rem;
-    border-radius: 8px
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    width: 90%;
 }
 
 .form-1{
@@ -111,23 +112,43 @@ h2{
     gap: 15px;
 }
 
+.form-1 p{
+    width: 80%;
+    font-size: 15px;
+    color: var(--GREY-500);
+    font-weight: var(--FW-LIGHT);
+}
+
 .form-input{
     display: grid;
     gap: 5px;
 }
 
-.form-input input{
-    border: 1px solid var(--GREY-500);
-    padding: 0.5rem;
-    border-radius: 5px;
+.form-input label{
+    font-size: 12px;
+    font-weight: var(--FW-LIGHT) ;
+    color: var(--BLUE-950);
 }
 
+.form-input input{
+    border: 1px solid var(--GREY-500);
+    padding: 1rem;
+    border-radius: 5px;
+}
 
 .form-button{
     width: 100%;
     background-color: var(--WHITE);
     margin-top: auto;
-    padding: 0 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
+.form-button button{
+    background-color: var(--BLUE-950);
+    color: var(--WHITE);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
